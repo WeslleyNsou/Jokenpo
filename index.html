@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="carousel.css">
+    <title>Jokenpô</title>
+</head>
+<body>
+    <div id="content">
+        //formulário para o usuário escolher sua jogada + botão para enviar a jogada
+        <div id="content-form">
+            <form action="" method="post" >
+                <label for="jokenpo">Escolha sua jogada:</label>
+                <select name="jokenpo" id="jokenpo">
+                    <option value="pedra">Pedra</option>
+                    <option value="papel">Papel</option>
+                    <option value="tesoura">Tesoura</option>
+                </select>
+                <input type="submit" value="Jogar" onclick="playGame(); return false;">
+            </form> 
+        </div>
+
+        //carrossel para mostrar as imagens das jogadas
+        <div id="carrousel-content">
+            <div id="carousel">
+                <div class="grup">
+                    <div class="carousel-item active">
+                        <img src="images/pedra.png" alt="Pedra" class="carousel-image">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/papel.png" alt="Papel" class="carousel-image">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/tesoura.png" alt="Tesoura" class="carousel-image">
+                    </div>
+                </div>
+                  <div class="grup" aria-hidden>//gurpo de imagens duplicado para o efeito de loop infinito
+                    <div class="carousel-item active">
+                        <img src="images/pedra.png" alt="Pedra" class="carousel-image">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/papel.png" alt="Papel" class="carousel-image">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/tesoura.png" alt="Tesoura" class="carousel-image">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        //exibição do resultado da jogada
+        <div id="result"></div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
